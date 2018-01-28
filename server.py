@@ -125,6 +125,7 @@ class WalletBalance(Resource):
 
         if user_find is not None and wallet_find is not None:
             user_find.pop('password')
+            print(wallet_find)
             print('The wallet has succesfully been fetched')
             return(wallet_find, 200, None)
 
@@ -141,19 +142,16 @@ class WalletBalance(Resource):
         user_find = homie_collection.find_one({'email': auth.username})
 
         if user_find is not None and 'fund_amount' in requested_json and 'email' in requested_json:
-            wallet_collection.insert_one({requested_json})
+            wallet_collection.insert_one(requested_json)
             print("The users funds have been sent to the database")
+            print(requested_json)
             return requested_json, 201, None
-
-        
-
-
-
 
 
 
 
 api.add_resource(User, '/users')
+api.add_resource(WalletBalance, '/wallet')
 
 @api.representation('application/json')
 def output_json(data, code, headers=None):

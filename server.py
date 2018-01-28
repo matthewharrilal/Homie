@@ -110,6 +110,49 @@ class User(Resource):
             print("The user could not be deleted")
             return(None, 404, None)
 
+class WalletBalance(Resource):
+    @authenticated_request
+    def get(self):
+        '''Fetches the user current wallet balance that has been saved in the database'''
+        wallet_collection = database.wallet_collection
+
+        # Getting access to the credentials passed in the headers to see if the user is actually logged in
+        auth = request.authorization
+
+        user_find = homie_collection.find_one({'email': auth.username})
+
+        wallet_find = wallet_collection.find_one({'email': auth.username})
+
+        if user_find is not None and wallet_find is not None:
+            user_find.pop('password')
+            print('The wallet has succesfully been fetched')
+            return(wallet_find, 200, None)
+
+    def post(self):
+        '''Posts the users wallet to the database'''
+        wallet_collection = database.wallet_collection
+
+        # Getting access to the users credentials so that we can verify if the user is logged in
+        auth = request.authorization
+
+        # The json in this case will essentially be the funds that the user has bought
+        requested_json = request.json
+
+        user_find = homie_collection.find_one({'email': auth.username})
+
+        if user_find is not None and 'fund_amount' in requested_json and 'email' in requested_json:
+            wallet_collection.insert_one({requested_json})
+            print("The users funds have been sent to the database")
+            return requested_json, 201, None
+
+        
+
+
+
+
+
+
+
 api.add_resource(User, '/users')
 
 @api.representation('application/json')

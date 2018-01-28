@@ -10,12 +10,24 @@ import Foundation
 import UIKit
 
 class User: Codable {
-    var email: String
-    var password: String
-    var credential: String
-    init(email: String, password: String) {
+    var email: String?
+    var password: String?
+    var credential: String?
+    init(email: String?, password: String?) {
         self.email = email
         self.password = password
-        self.credential = 
+        self.credential = BasicAuth.generateBasicAuthHeader(email: email!, password: password!)
+    }
+    
+    enum TopLevelKeys: String, CodingKey {
+        case email
+        case password
+    }
+    
+    required convenience init(from decoder: Decoder) {
+        let container = try? decoder.container(keyedBy: TopLevelKeys.self)
+        let email = try? container?.decodeIfPresent(String.self, forKey: .email)
+        let password = try? container?.decodeIfPresent(String.self, forKey: .password)
+        self.init(email: email!, password: password!)
     }
 }

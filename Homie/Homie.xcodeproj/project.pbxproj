@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C0C3A4F201D352A00AA3F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A4E201D352A00AA3F61 /* AppDelegate.swift */; };
-		1C0C3A51201D352A00AA3F61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A50201D352A00AA3F61 /* ViewController.swift */; };
+		1C0C3A51201D352A00AA3F61 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A50201D352A00AA3F61 /* LogInViewController.swift */; };
 		1C0C3A54201D352A00AA3F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A52201D352A00AA3F61 /* Main.storyboard */; };
 		1C0C3A57201D352A00AA3F61 /* Homie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A55201D352A00AA3F61 /* Homie.xcdatamodeld */; };
 		1C0C3A59201D352A00AA3F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A58201D352A00AA3F61 /* Assets.xcassets */; };
@@ -16,13 +16,15 @@
 		1C0C3A67201D4D0600AA3F61 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A66201D4D0600AA3F61 /* UserModel.swift */; };
 		1C0C3A69201D4D7300AA3F61 /* BasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A68201D4D7300AA3F61 /* BasicAuth.swift */; };
 		1C0C3A6B201D502800AA3F61 /* UserNetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A6A201D502800AA3F61 /* UserNetworkingLayer.swift */; };
+		1C0C3A6E201D574D00AA3F61 /* ManageLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A6D201D574D00AA3F61 /* ManageLogin.swift */; };
+		1C0C3A70201D5E2400AA3F61 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A6F201D5E2400AA3F61 /* HomeViewController.swift */; };
 		F5F4FEC06F4426215F4703F1 /* Pods_Homie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF90CAC5AD62C745EDB8F4C /* Pods_Homie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C0C3A4B201D352A00AA3F61 /* Homie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C0C3A4E201D352A00AA3F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1C0C3A50201D352A00AA3F61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C0C3A50201D352A00AA3F61 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		1C0C3A53201D352A00AA3F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C0C3A56201D352A00AA3F61 /* Homie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homie.xcdatamodel; sourceTree = "<group>"; };
 		1C0C3A58201D352A00AA3F61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,6 +33,8 @@
 		1C0C3A66201D4D0600AA3F61 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		1C0C3A68201D4D7300AA3F61 /* BasicAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAuth.swift; sourceTree = "<group>"; };
 		1C0C3A6A201D502800AA3F61 /* UserNetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkingLayer.swift; sourceTree = "<group>"; };
+		1C0C3A6D201D574D00AA3F61 /* ManageLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageLogin.swift; sourceTree = "<group>"; };
+		1C0C3A6F201D5E2400AA3F61 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		49591735D3619CFB7B4E29EB /* Pods-Homie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.release.xcconfig"; sourceTree = "<group>"; };
 		874C7D7E97301BFFC563F871 /* Pods-Homie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.debug.xcconfig"; sourceTree = "<group>"; };
 		FAF90CAC5AD62C745EDB8F4C /* Pods_Homie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,11 +73,11 @@
 		1C0C3A4D201D352A00AA3F61 /* Homie */ = {
 			isa = PBXGroup;
 			children = (
+				1C0C3A6C201D538B00AA3F61 /* View Controllers */,
 				1C0C3A65201D4CF400AA3F61 /* Helpers */,
 				1C0C3A64201D4CED00AA3F61 /* Networking */,
 				1C0C3A63201D4CE700AA3F61 /* Models */,
 				1C0C3A4E201D352A00AA3F61 /* AppDelegate.swift */,
-				1C0C3A50201D352A00AA3F61 /* ViewController.swift */,
 				1C0C3A52201D352A00AA3F61 /* Main.storyboard */,
 				1C0C3A58201D352A00AA3F61 /* Assets.xcassets */,
 				1C0C3A5A201D352A00AA3F61 /* LaunchScreen.storyboard */,
@@ -103,8 +107,18 @@
 			isa = PBXGroup;
 			children = (
 				1C0C3A68201D4D7300AA3F61 /* BasicAuth.swift */,
+				1C0C3A6D201D574D00AA3F61 /* ManageLogin.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1C0C3A6C201D538B00AA3F61 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C0C3A50201D352A00AA3F61 /* LogInViewController.swift */,
+				1C0C3A6F201D5E2400AA3F61 /* HomeViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		37329A679E0B649E9F2712C4 /* Frameworks */ = {
@@ -258,8 +272,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C0C3A69201D4D7300AA3F61 /* BasicAuth.swift in Sources */,
-				1C0C3A51201D352A00AA3F61 /* ViewController.swift in Sources */,
+				1C0C3A51201D352A00AA3F61 /* LogInViewController.swift in Sources */,
 				1C0C3A6B201D502800AA3F61 /* UserNetworkingLayer.swift in Sources */,
+				1C0C3A70201D5E2400AA3F61 /* HomeViewController.swift in Sources */,
+				1C0C3A6E201D574D00AA3F61 /* ManageLogin.swift in Sources */,
 				1C0C3A57201D352A00AA3F61 /* Homie.xcdatamodeld in Sources */,
 				1C0C3A67201D4D0600AA3F61 /* UserModel.swift in Sources */,
 				1C0C3A4F201D352A00AA3F61 /* AppDelegate.swift in Sources */,

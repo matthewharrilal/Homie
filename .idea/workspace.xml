@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27ed5056-5a5b-464d-8390-1c4281c2b960" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Homie.xcodeproj/project.xcworkspace/xcuserdata/matthewharrilal.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Homie/Homie.xcodeproj/project.xcworkspace/xcuserdata/matthewharrilal.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Homie/Helpers/BasicAuth.swift" afterPath="$PROJECT_DIR$/Homie/Homie/Helpers/BasicAuth.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Homie/Models/UserModel.swift" afterPath="$PROJECT_DIR$/Homie/Homie/Models/UserModel.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Homie/Homie/View Controllers/HomeViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Homie.xcworkspace/xcuserdata/matthewharrilal.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Homie/Homie.xcworkspace/xcuserdata/matthewharrilal.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Homie.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Homie/Homie.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Homie/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/Homie/Homie/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Homie/Helpers/ManageLogin.swift" afterPath="$PROJECT_DIR$/Homie/Homie/Helpers/ManageLogin.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Homie/Networking/UserNetworkingLayer.swift" afterPath="$PROJECT_DIR$/Homie/Homie/Networking/UserNetworkingLayer.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Homie/Homie/View Controllers/LogInViewController.swift" afterPath="$PROJECT_DIR$/Homie/Homie/View Controllers/LogInViewController.swift" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +23,7 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
+            <state relative-caret-position="428">
               <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
@@ -206,7 +211,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
+        <state relative-caret-position="428">
           <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />

@@ -15,6 +15,8 @@
 		1C0C3A5C201D352A00AA3F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A5A201D352A00AA3F61 /* LaunchScreen.storyboard */; };
 		1C0C3A67201D4D0600AA3F61 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A66201D4D0600AA3F61 /* UserModel.swift */; };
 		1C0C3A69201D4D7300AA3F61 /* BasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A68201D4D7300AA3F61 /* BasicAuth.swift */; };
+		1C0C3A6B201D502800AA3F61 /* UserNetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A6A201D502800AA3F61 /* UserNetworkingLayer.swift */; };
+		F5F4FEC06F4426215F4703F1 /* Pods_Homie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF90CAC5AD62C745EDB8F4C /* Pods_Homie.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		1C0C3A5D201D352A00AA3F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C0C3A66201D4D0600AA3F61 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		1C0C3A68201D4D7300AA3F61 /* BasicAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAuth.swift; sourceTree = "<group>"; };
+		1C0C3A6A201D502800AA3F61 /* UserNetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkingLayer.swift; sourceTree = "<group>"; };
+		49591735D3619CFB7B4E29EB /* Pods-Homie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.release.xcconfig"; sourceTree = "<group>"; };
+		874C7D7E97301BFFC563F871 /* Pods-Homie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.debug.xcconfig"; sourceTree = "<group>"; };
+		FAF90CAC5AD62C745EDB8F4C /* Pods_Homie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5F4FEC06F4426215F4703F1 /* Pods_Homie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +53,8 @@
 			children = (
 				1C0C3A4D201D352A00AA3F61 /* Homie */,
 				1C0C3A4C201D352A00AA3F61 /* Products */,
+				82A7D78131CCDE26AFE95491 /* Pods */,
+				37329A679E0B649E9F2712C4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +94,7 @@
 		1C0C3A64201D4CED00AA3F61 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				1C0C3A6A201D502800AA3F61 /* UserNetworkingLayer.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -97,6 +107,23 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		37329A679E0B649E9F2712C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAF90CAC5AD62C745EDB8F4C /* Pods_Homie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82A7D78131CCDE26AFE95491 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				874C7D7E97301BFFC563F871 /* Pods-Homie.debug.xcconfig */,
+				49591735D3619CFB7B4E29EB /* Pods-Homie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C0C3A60201D352A00AA3F61 /* Build configuration list for PBXNativeTarget "Homie" */;
 			buildPhases = (
+				AC29765D5FB826430644AD88 /* [CP] Check Pods Manifest.lock */,
 				1C0C3A47201D352A00AA3F61 /* Sources */,
 				1C0C3A48201D352A00AA3F61 /* Frameworks */,
 				1C0C3A49201D352A00AA3F61 /* Resources */,
+				542B452008C31D2A99F99B32 /* [CP] Embed Pods Frameworks */,
+				559821C3634DF5D3B7B34B0B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,6 +194,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		542B452008C31D2A99F99B32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Homie/Pods-Homie-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Homie/Pods-Homie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		559821C3634DF5D3B7B34B0B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Homie/Pods-Homie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC29765D5FB826430644AD88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Homie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1C0C3A47201D352A00AA3F61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -171,6 +259,7 @@
 			files = (
 				1C0C3A69201D4D7300AA3F61 /* BasicAuth.swift in Sources */,
 				1C0C3A51201D352A00AA3F61 /* ViewController.swift in Sources */,
+				1C0C3A6B201D502800AA3F61 /* UserNetworkingLayer.swift in Sources */,
 				1C0C3A57201D352A00AA3F61 /* Homie.xcdatamodeld in Sources */,
 				1C0C3A67201D4D0600AA3F61 /* UserModel.swift in Sources */,
 				1C0C3A4F201D352A00AA3F61 /* AppDelegate.swift in Sources */,
@@ -308,6 +397,7 @@
 		};
 		1C0C3A61201D352A00AA3F61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 874C7D7E97301BFFC563F871 /* Pods-Homie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -323,6 +413,7 @@
 		};
 		1C0C3A62201D352A00AA3F61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49591735D3619CFB7B4E29EB /* Pods-Homie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -13,6 +13,8 @@
 		1C0C3A57201D352A00AA3F61 /* Homie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A55201D352A00AA3F61 /* Homie.xcdatamodeld */; };
 		1C0C3A59201D352A00AA3F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A58201D352A00AA3F61 /* Assets.xcassets */; };
 		1C0C3A5C201D352A00AA3F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A5A201D352A00AA3F61 /* LaunchScreen.storyboard */; };
+		1C0C3A67201D4D0600AA3F61 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A66201D4D0600AA3F61 /* UserModel.swift */; };
+		1C0C3A69201D4D7300AA3F61 /* BasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A68201D4D7300AA3F61 /* BasicAuth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1C0C3A58201D352A00AA3F61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C0C3A5B201D352A00AA3F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C0C3A5D201D352A00AA3F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C0C3A66201D4D0600AA3F61 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1C0C3A68201D4D7300AA3F61 /* BasicAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAuth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,9 @@
 		1C0C3A4D201D352A00AA3F61 /* Homie */ = {
 			isa = PBXGroup;
 			children = (
+				1C0C3A65201D4CF400AA3F61 /* Helpers */,
+				1C0C3A64201D4CED00AA3F61 /* Networking */,
+				1C0C3A63201D4CE700AA3F61 /* Models */,
 				1C0C3A4E201D352A00AA3F61 /* AppDelegate.swift */,
 				1C0C3A50201D352A00AA3F61 /* ViewController.swift */,
 				1C0C3A52201D352A00AA3F61 /* Main.storyboard */,
@@ -65,6 +72,29 @@
 				1C0C3A55201D352A00AA3F61 /* Homie.xcdatamodeld */,
 			);
 			path = Homie;
+			sourceTree = "<group>";
+		};
+		1C0C3A63201D4CE700AA3F61 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1C0C3A66201D4D0600AA3F61 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1C0C3A64201D4CED00AA3F61 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1C0C3A65201D4CF400AA3F61 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1C0C3A68201D4D7300AA3F61 /* BasicAuth.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C0C3A69201D4D7300AA3F61 /* BasicAuth.swift in Sources */,
 				1C0C3A51201D352A00AA3F61 /* ViewController.swift in Sources */,
 				1C0C3A57201D352A00AA3F61 /* Homie.xcdatamodeld in Sources */,
+				1C0C3A67201D4D0600AA3F61 /* UserModel.swift in Sources */,
 				1C0C3A4F201D352A00AA3F61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

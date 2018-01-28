@@ -18,6 +18,16 @@
 		1C0C3A6B201D502800AA3F61 /* UserNetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A6A201D502800AA3F61 /* UserNetworkingLayer.swift */; };
 		1C0C3A6E201D574D00AA3F61 /* ManageLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A6D201D574D00AA3F61 /* ManageLogin.swift */; };
 		1C0C3A70201D5E2400AA3F61 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A6F201D5E2400AA3F61 /* HomeViewController.swift */; };
+		1C0C3A72201E4BDF00AA3F61 /* Steven.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A71201E4BDF00AA3F61 /* Steven.png */; };
+		1C0C3A74201E4D1000AA3F61 /* homielogowhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A73201E4D1000AA3F61 /* homielogowhite.png */; };
+		1C0C3A76201E4DC200AA3F61 /* men-curly-hair (1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A75201E4DC200AA3F61 /* men-curly-hair (1).jpg */; };
+		1C0C3A78201E4EDD00AA3F61 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A77201E4EDD00AA3F61 /* FirstViewController.swift */; };
+		1C0C3A7A201E51C900AA3F61 /* maplogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A79201E51C900AA3F61 /* maplogo.jpg */; };
+		1C0C3A7C201E525700AA3F61 /* newicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A7B201E525700AA3F61 /* newicon.png */; };
+		1C0C3A7E201E533800AA3F61 /* maxresdefault.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A7D201E533800AA3F61 /* maxresdefault.jpg */; };
+		1C0C3A80201E560300AA3F61 /* camara.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A7F201E560300AA3F61 /* camara.jpg */; };
+		1C0C3A82201E57D200AA3F61 /* Actual QR.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A81201E57D200AA3F61 /* Actual QR.JPG */; };
+		1C0C3A84201E59DF00AA3F61 /* ottawa-homeless-person-byward-market-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A83201E59DE00AA3F61 /* ottawa-homeless-person-byward-market-2.jpg */; };
 		F5F4FEC06F4426215F4703F1 /* Pods_Homie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF90CAC5AD62C745EDB8F4C /* Pods_Homie.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +45,16 @@
 		1C0C3A6A201D502800AA3F61 /* UserNetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkingLayer.swift; sourceTree = "<group>"; };
 		1C0C3A6D201D574D00AA3F61 /* ManageLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageLogin.swift; sourceTree = "<group>"; };
 		1C0C3A6F201D5E2400AA3F61 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1C0C3A71201E4BDF00AA3F61 /* Steven.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Steven.png; sourceTree = "<group>"; };
+		1C0C3A73201E4D1000AA3F61 /* homielogowhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homielogowhite.png; sourceTree = "<group>"; };
+		1C0C3A75201E4DC200AA3F61 /* men-curly-hair (1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "men-curly-hair (1).jpg"; sourceTree = "<group>"; };
+		1C0C3A77201E4EDD00AA3F61 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		1C0C3A79201E51C900AA3F61 /* maplogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = maplogo.jpg; sourceTree = "<group>"; };
+		1C0C3A7B201E525700AA3F61 /* newicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newicon.png; sourceTree = "<group>"; };
+		1C0C3A7D201E533800AA3F61 /* maxresdefault.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = maxresdefault.jpg; sourceTree = "<group>"; };
+		1C0C3A7F201E560300AA3F61 /* camara.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camara.jpg; sourceTree = "<group>"; };
+		1C0C3A81201E57D200AA3F61 /* Actual QR.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Actual QR.JPG"; sourceTree = "<group>"; };
+		1C0C3A83201E59DE00AA3F61 /* ottawa-homeless-person-byward-market-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ottawa-homeless-person-byward-market-2.jpg"; sourceTree = "<group>"; };
 		49591735D3619CFB7B4E29EB /* Pods-Homie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.release.xcconfig"; sourceTree = "<group>"; };
 		874C7D7E97301BFFC563F871 /* Pods-Homie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.debug.xcconfig"; sourceTree = "<group>"; };
 		FAF90CAC5AD62C745EDB8F4C /* Pods_Homie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +126,15 @@
 		1C0C3A65201D4CF400AA3F61 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1C0C3A81201E57D200AA3F61 /* Actual QR.JPG */,
+				1C0C3A83201E59DE00AA3F61 /* ottawa-homeless-person-byward-market-2.jpg */,
+				1C0C3A7D201E533800AA3F61 /* maxresdefault.jpg */,
+				1C0C3A7F201E560300AA3F61 /* camara.jpg */,
+				1C0C3A79201E51C900AA3F61 /* maplogo.jpg */,
+				1C0C3A7B201E525700AA3F61 /* newicon.png */,
+				1C0C3A75201E4DC200AA3F61 /* men-curly-hair (1).jpg */,
+				1C0C3A73201E4D1000AA3F61 /* homielogowhite.png */,
+				1C0C3A71201E4BDF00AA3F61 /* Steven.png */,
 				1C0C3A68201D4D7300AA3F61 /* BasicAuth.swift */,
 				1C0C3A6D201D574D00AA3F61 /* ManageLogin.swift */,
 			);
@@ -116,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				1C0C3A50201D352A00AA3F61 /* LogInViewController.swift */,
+				1C0C3A77201E4EDD00AA3F61 /* FirstViewController.swift */,
 				1C0C3A6F201D5E2400AA3F61 /* HomeViewController.swift */,
 			);
 			path = "View Controllers";
@@ -200,8 +230,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C0C3A74201E4D1000AA3F61 /* homielogowhite.png in Resources */,
+				1C0C3A7C201E525700AA3F61 /* newicon.png in Resources */,
 				1C0C3A5C201D352A00AA3F61 /* LaunchScreen.storyboard in Resources */,
 				1C0C3A59201D352A00AA3F61 /* Assets.xcassets in Resources */,
+				1C0C3A84201E59DF00AA3F61 /* ottawa-homeless-person-byward-market-2.jpg in Resources */,
+				1C0C3A80201E560300AA3F61 /* camara.jpg in Resources */,
+				1C0C3A72201E4BDF00AA3F61 /* Steven.png in Resources */,
+				1C0C3A82201E57D200AA3F61 /* Actual QR.JPG in Resources */,
+				1C0C3A7A201E51C900AA3F61 /* maplogo.jpg in Resources */,
+				1C0C3A76201E4DC200AA3F61 /* men-curly-hair (1).jpg in Resources */,
+				1C0C3A7E201E533800AA3F61 /* maxresdefault.jpg in Resources */,
 				1C0C3A54201D352A00AA3F61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C0C3A78201E4EDD00AA3F61 /* FirstViewController.swift in Sources */,
 				1C0C3A69201D4D7300AA3F61 /* BasicAuth.swift in Sources */,
 				1C0C3A51201D352A00AA3F61 /* LogInViewController.swift in Sources */,
 				1C0C3A6B201D502800AA3F61 /* UserNetworkingLayer.swift in Sources */,

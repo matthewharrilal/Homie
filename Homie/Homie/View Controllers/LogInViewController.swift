@@ -16,11 +16,26 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        emailTextField.layer.borderWidth = 1 / UIScreen.main.nativeScale
+        var contentEdgeInserts = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        emailTextField.layer.cornerRadius = emailTextField.frame.height / 2
+        emailTextField.layer.masksToBounds = true
+//        emailTextField.frame.size.height = 40
+//        emailTextField.frame.size.height = 40
+        
+        
+        passwordTextField.layer.borderWidth = 1 / UIScreen.main.nativeScale
+//        var x = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        passwordTextField.layer.cornerRadius = emailTextField.frame.height / 2
+        passwordTextField.layer.masksToBounds = true
+        self.navigationController?.navigationBar.isHidden = true
     }
-
+    
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
 
     @IBAction func logInButton(_ sender: Any) {

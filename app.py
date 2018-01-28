@@ -149,7 +149,7 @@ class WalletBalance(Resource):
             return requested_json, 201, None
 
 
-api.add_resource(User, '/users')
+api.add_resource(User, '/')
 api.add_resource(WalletBalance, '/wallet')
 
 @api.representation('application/json')

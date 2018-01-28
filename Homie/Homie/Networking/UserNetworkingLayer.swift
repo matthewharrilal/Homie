@@ -22,7 +22,7 @@ enum DifferentUsers {
 
 extension DifferentUsers: TargetType {
     var baseURL: URL {
-        let baseUrl = URL(string: "https://homie-application.herokuapp.com/")
+        let baseUrl = URL(string: "https://dashboard.heroku.com/apps/homie-application")
         return baseUrl!
     }
     

@@ -9,14 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Homie/Networking/UserNetworkingLayer.swift"
-            timestampString = "538797353.2531199"
+            filePath = "Homie/Helpers/ManageLogin.swift"
+            timestampString = "538801489.297882"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "userNetworking(target:success:error:failure:)"
-            landmarkType = "9">
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "logUserIn(completionHandler:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

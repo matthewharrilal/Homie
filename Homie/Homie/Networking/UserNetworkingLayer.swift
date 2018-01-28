@@ -22,7 +22,7 @@ enum DifferentUsers {
 
 extension DifferentUsers: TargetType {
     var baseURL: URL {
-        let baseUrl = URL(string: "https://dashboard.heroku.com/apps/homie-application")
+        let baseUrl = URL(string: "https://homie-application.herokuapp.com/")
         return baseUrl!
     }
     
@@ -30,7 +30,7 @@ extension DifferentUsers: TargetType {
         switch self {
         case .fetchUsers: fallthrough
         case .createUsers:
-            return "/users"
+            return "users"
         }
     }
     var method: Moya.Method {

@@ -28,7 +28,7 @@ def authenticated_request(func):
         print('***********')
         print(request.authorization)
         print('***********')
-        auth_code = request.headers['authorization']
+        auth_code = request.headers['Authorization']
         email,password = decode(auth_code)
 
         if email is not None and password is not None:

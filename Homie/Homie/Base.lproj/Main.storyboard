@@ -227,15 +227,22 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJa-HN-Z2k">
-                                <rect key="frame" x="169" y="613" width="76" height="30"/>
+                                <rect key="frame" x="169" y="618" width="76" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpButton:" destination="srE-J9-tOI" eventType="touchUpInside" id="edj-0n-QRj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.39215686274509803" green="0.77647058823529413" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="5fa-D8-Yli"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="f2E-dr-Fqu" id="FDd-Kj-PeY"/>
+                        <outlet property="passwordTextField" destination="l18-WX-FWk" id="of2-Cb-Rkg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P70-MR-Fz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

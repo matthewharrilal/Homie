@@ -70,8 +70,10 @@ extension DifferentUsers: TargetType {
     var headers: [String : String]? {
         let user = User(email: EmailandPassword.email, password: EmailandPassword.password)
         switch self {
-        case .createUsers, .fetchUsers:
+        case .fetchUsers:
             return ["Authorization": (user.credential)!]
+        case .createUsers:
+            return [:]
         }
     }
     

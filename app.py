@@ -54,7 +54,7 @@ class User(Resource):
         requested_json = request.json
 
         # So we specfically have to get the password so we can essentially hash it in our server
-        requested_password = requested_json.get('password')
+        requested_password = requested_json['password']
 
         # Once we have the users password we can now be able to encode the users password in plain text and then it can be hashed
         encoded_password = requested_password.encode('utf-8')

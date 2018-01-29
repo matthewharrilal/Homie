@@ -43,6 +43,23 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         session.startRunning()
     }
     
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        if metadataObjects != nil && metadataObjects.count != 0 {
+            if let object = metadataObjects[0] as? AVMetadataMachineReadableCodeObject {
+                if object.type == AVMetadataObject.ObjectType.qr {
+                    let alert = UIAlertController(title: "QR Code Scanner", message: object.stringValue, preferredStyle: .alert)
+                    let retakeAction = UIAlertAction(title: "Retake ", style: .default, handler: nil)
+                    let copyToClipboardAction = UIAlertAction(title: "Copy", style: .default, handler: { (nil) in
+                        UIPasteboard.general.string = object.stringValue
+                    })
+                    alert.addAction(retakeAction)
+                    alert.addAction(copyToClipboardAction)
+                self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -18,6 +18,7 @@ class QRViewController: UIViewController {
         
     }
     
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -7,5 +7,4 @@ target 'Homie' do
 
   # Pods for Homie
 	pod 'Moya'
-pod 'QRSwift'
 end

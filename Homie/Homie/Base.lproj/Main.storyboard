@@ -248,6 +248,21 @@
             </objects>
             <point key="canvasLocation" x="663.768115942029" y="830.70652173913049"/>
         </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="UUL-ny-rtR">
+            <objects>
+                <viewController id="r2D-FY-JCy" customClass="CameraViewController" customModule="Homie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NsR-V7-9P3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rkb-Rv-Yff"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCF-V4-Zy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="1595"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="fiP-Un-ojx">
             <objects>
@@ -295,6 +310,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IL9-tv-rXc"/>
                     </view>
+                    <connections>
+                        <outlet property="qrImageView" destination="1iY-km-kHo" id="b9w-Od-3V8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNh-kk-LBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

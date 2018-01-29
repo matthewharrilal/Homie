@@ -8,12 +8,15 @@
 
 import Foundation
 import UIKit
-import QRSwift
+import SwiftQRCode
 
 class QRViewController: UIViewController {
     
+    @IBOutlet weak var qrImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        qrImageView.image = QRCode
     }
     
     override func didReceiveMemoryWarning() {

@@ -200,7 +200,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Actual QR.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="1iY-km-kHo">
-                                <rect key="frame" x="60" y="115" width="294" height="182"/>
+                                <rect key="frame" x="60" y="115" width="305" height="226"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Steven.png" translatesAutoresizingMaskIntoConstraints="NO" id="D6p-x8-Xcd">
@@ -222,6 +222,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Send Homie Coins"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3up-qh-V5d">
+                                <rect key="frame" x="50" y="576" width="315" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="m2Q-ss-K3e" kind="show" id="4YQ-nV-GdR"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maplogo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8y3-m5-5Ba">
                                 <rect key="frame" x="20" y="28" width="59" height="47"/>
@@ -248,5 +255,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="we0-zh-yyZ"/>
+        <segue reference="4YQ-nV-GdR"/>
     </inferredMetricsTieBreakers>
 </document>

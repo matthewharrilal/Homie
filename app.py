@@ -14,7 +14,7 @@ from bson.json_util import dumps
 
 app = Flask(__name__)
 
-client = MongoClient('mongodb://<matthewHarrilal>:<Latchman1>@ds117878.mlab.com:17878/homie')
+client = MongoClient('mmongodb://matthewHarrilal:Latchman1@ds117878.mlab.com:17878/homie')
 app.db = client.homie
 database = app.db
 rounds = app.bcrypt_rounds = 5

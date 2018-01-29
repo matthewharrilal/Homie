@@ -16,6 +16,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTapped()
+//        self.navigationController?.navigationBar.isTranslucent = true
     }
     
     override func didReceiveMemoryWarning() {

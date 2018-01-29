@@ -30,7 +30,7 @@ class LogInViewController: UIViewController {
         passwordTextField.layer.masksToBounds = true
         self.navigationController?.navigationBar.isHidden = true
         self.hideKeyboardWhenTapped()
-        
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {

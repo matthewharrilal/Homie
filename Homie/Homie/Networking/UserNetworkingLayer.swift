@@ -48,10 +48,9 @@ extension DifferentUsers: TargetType {
             return Data()
         case .createUsers:
             var jsonBody = Data()
-            let user = User(email: "ralph@gmail.com", password:"ralph")
             
             do {
-                jsonBody = try! JSONEncoder().encode(user)
+                jsonBody = try! JSONEncoder().encode(jsonBody)
             }
             catch {
                 fatalError("Unresolved error \(error)")
@@ -62,8 +61,10 @@ extension DifferentUsers: TargetType {
     
     var task: Task {
         switch self {
-        case .createUsers, .fetchUsers:
+        case .fetchUsers:
             return .requestPlain
+        case .createUsers:
+            return .requestParameters(parameters: ["email": EmailandPassword.email, "password": EmailandPassword.password], encoding: JSONEncoding.default)
         }
     }
     

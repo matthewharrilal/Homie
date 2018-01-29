@@ -1,0 +1,6 @@
+framework module QRSwift {
+  umbrella header "QRSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

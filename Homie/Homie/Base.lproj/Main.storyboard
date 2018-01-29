@@ -251,7 +251,7 @@
         <!--View Controller-->
         <scene sceneID="fiP-Un-ojx">
             <objects>
-                <viewController id="UvX-pK-uvz" sceneMemberID="viewController">
+                <viewController id="UvX-pK-uvz" customClass="QRViewController" customModule="Homie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HxN-JN-hJZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,6 +330,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="we0-zh-yyZ"/>
-        <segue reference="fuv-0x-GW9"/>
+        <segue reference="4YQ-nV-GdR"/>
     </inferredMetricsTieBreakers>
 </document>

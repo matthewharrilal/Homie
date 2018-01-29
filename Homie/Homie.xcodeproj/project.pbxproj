@@ -30,6 +30,8 @@
 		1C0C3A84201E59DF00AA3F61 /* ottawa-homeless-person-byward-market-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C3A83201E59DE00AA3F61 /* ottawa-homeless-person-byward-market-2.jpg */; };
 		1C0C3A86201FBE5C00AA3F61 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A85201FBE5C00AA3F61 /* Helpers.swift */; };
 		1C0C3A88201FC3B400AA3F61 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C3A87201FC3B400AA3F61 /* SignUpViewController.swift */; };
+		1C166336201FD89B00A291AD /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C166335201FD89B00A291AD /* ScannerViewController.swift */; };
+		1C166338201FDA3B00A291AD /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C166337201FDA3B00A291AD /* QRViewController.swift */; };
 		F5F4FEC06F4426215F4703F1 /* Pods_Homie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF90CAC5AD62C745EDB8F4C /* Pods_Homie.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		1C0C3A83201E59DE00AA3F61 /* ottawa-homeless-person-byward-market-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ottawa-homeless-person-byward-market-2.jpg"; sourceTree = "<group>"; };
 		1C0C3A85201FBE5C00AA3F61 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		1C0C3A87201FC3B400AA3F61 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1C166335201FD89B00A291AD /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		1C166337201FDA3B00A291AD /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		49591735D3619CFB7B4E29EB /* Pods-Homie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.release.xcconfig"; sourceTree = "<group>"; };
 		874C7D7E97301BFFC563F871 /* Pods-Homie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.debug.xcconfig"; sourceTree = "<group>"; };
 		FAF90CAC5AD62C745EDB8F4C /* Pods_Homie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +157,8 @@
 				1C0C3A77201E4EDD00AA3F61 /* FirstViewController.swift */,
 				1C0C3A6F201D5E2400AA3F61 /* HomeViewController.swift */,
 				1C0C3A87201FC3B400AA3F61 /* SignUpViewController.swift */,
+				1C166335201FD89B00A291AD /* ScannerViewController.swift */,
+				1C166337201FDA3B00A291AD /* QRViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -263,12 +269,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Homie/Pods-Homie-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/QRSwift/QRSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,8 +331,10 @@
 				1C0C3A86201FBE5C00AA3F61 /* Helpers.swift in Sources */,
 				1C0C3A6B201D502800AA3F61 /* UserNetworkingLayer.swift in Sources */,
 				1C0C3A70201D5E2400AA3F61 /* HomeViewController.swift in Sources */,
+				1C166336201FD89B00A291AD /* ScannerViewController.swift in Sources */,
 				1C0C3A6E201D574D00AA3F61 /* ManageLogin.swift in Sources */,
 				1C0C3A57201D352A00AA3F61 /* Homie.xcdatamodeld in Sources */,
+				1C166338201FDA3B00A291AD /* QRViewController.swift in Sources */,
 				1C0C3A67201D4D0600AA3F61 /* UserModel.swift in Sources */,
 				1C0C3A4F201D352A00AA3F61 /* AppDelegate.swift in Sources */,
 			);

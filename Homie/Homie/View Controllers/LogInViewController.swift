@@ -29,16 +29,10 @@ class LogInViewController: UIViewController {
         passwordTextField.layer.cornerRadius = emailTextField.frame.height / 2
         passwordTextField.layer.masksToBounds = true
         self.navigationController?.navigationBar.isHidden = true
+        self.hideKeyboardWhenTapped()
         
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-//        tap.cancelsTouchesInView = false
-//        view.addGestureRecognizer(tap)
     }
     
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
-   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -59,3 +53,13 @@ class LogInViewController: UIViewController {
     
 }
 
+extension  UIViewController {
+    func hideKeyboardWhenTapped() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}

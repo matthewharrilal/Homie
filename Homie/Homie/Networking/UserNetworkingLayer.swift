@@ -48,7 +48,7 @@ extension DifferentUsers: TargetType {
             return Data()
         case .createUsers:
             var jsonBody = Data()
-            let user:User? = nil
+            let user = User(email: "ralph@gmail.com", password:"ralph")
             
             do {
                 jsonBody = try! JSONEncoder().encode(user)

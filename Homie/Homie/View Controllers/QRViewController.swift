@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class QRViewController: UIViewController {
+class QRGeneratorViewController: UIViewController {
     
     @IBOutlet weak var qrImageView: UIImageView!
     

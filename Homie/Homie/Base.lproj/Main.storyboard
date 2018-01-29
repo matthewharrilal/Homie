@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yyH-P3-Uz9">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -103,13 +103,6 @@
                                 <rect key="frame" x="20" y="27" width="47" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S81-kU-AZ0">
-                                <rect key="frame" x="0.0" y="600" width="414" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="hJC-n5-IDd" kind="show" id="0LO-ca-9l8"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJg-Zp-4hI">
                                 <rect key="frame" x="350" y="12" width="46" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -175,9 +168,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOy-Tg-bME">
                                 <rect key="frame" x="350" y="10" width="46" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="UvX-pK-uvz" kind="show" id="we0-zh-yyZ"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ottawa-homeless-person-byward-market-2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9Zb-Wd-0lC">
                                 <rect key="frame" x="46" y="124" width="322" height="225"/>
@@ -198,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MdP-CC-xSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828.985507246377" y="28.532608695652176"/>
+            <point key="canvasLocation" x="2506" y="-113"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="03d-2z-a6x">
@@ -298,9 +288,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3up-qh-V5d">
                                 <rect key="frame" x="50" y="576" width="315" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="m2Q-ss-K3e" kind="show" id="4YQ-nV-GdR"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maplogo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8y3-m5-5Ba">
                                 <rect key="frame" x="20" y="28" width="59" height="47"/>
@@ -354,8 +341,4 @@
         <image name="newicon.png" width="271" height="270"/>
         <image name="ottawa-homeless-person-byward-market-2.jpg" width="587" height="389"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="we0-zh-yyZ"/>
-        <segue reference="fuv-0x-GW9"/>
-    </inferredMetricsTieBreakers>
 </document>

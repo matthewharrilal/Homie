@@ -17,6 +17,7 @@ class QRGeneratorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         convertToQRCode()
+        self.navigationController?.navigationBar.isHidden = true
     }
     
 

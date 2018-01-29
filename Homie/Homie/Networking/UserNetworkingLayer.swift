@@ -77,7 +77,7 @@ extension DifferentUsers: TargetType {
     
 }
 
-func userNetworking(target: DifferentUsers, success successCallBack: @escaping(Response)-> Void, error errorCallBack: @escaping(Swift.Error) -> Void, failure failureCallBack: @escaping(MoyaError) -> Void) {
+func userNetworking(target: DifferentUsers, success successCallBack: @escaping(Response)-> Void, error errorCallBack: @escaping(Swift.Error) -> Void, failure failureCallBack: @escaping(MoyaError) -> Void, controller: UIViewController) {
     let provider = MoyaProvider<DifferentUsers>()
     provider.request(target) { (result) in
         switch result {
@@ -87,6 +87,9 @@ func userNetworking(target: DifferentUsers, success successCallBack: @escaping(R
 //                let logInVC = LogInViewController()
 //                logInVC.performSegue(withIdentifier: "toHome", sender: nil)
                 successCallBack(response)
+            }
+            else {
+                logInAlert(controller: controller)
             }
         case .failure(let error):
             fatalError("Login Credentials Were Not Right")

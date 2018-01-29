@@ -44,22 +44,15 @@ class LogInViewController: UIViewController {
         let password = passwordTextField.text else {return}
         EmailandPassword.email = email
         EmailandPassword.password = password
-        let logIn = LoginManager()
-        logIn.logUserIn { (data) in
-            print(data)
-        }
-        self.performSegue(withIdentifier: "toHome", sender: self)
+        userNetworking(target: .fetchUsers, success: { (response) in
+            let json = try? response.mapJSON()
+            print(json)
+            self.performSegue(withIdentifier: "toHome", sender: self)
+        }, error: { (error) in
+            print(error)
+        }, failure: { (MoyaError) in
+            print(MoyaError)
+        }, controller: self)
     }
     
-}
-
-extension  UIViewController {
-    func hideKeyboardWhenTapped() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
 }

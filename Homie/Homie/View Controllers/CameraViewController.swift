@@ -23,7 +23,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
         
         do {
-            let input = try AVCaptureDeviceInput(device: captureDevice)
+            let input = try AVCaptureDeviceInput(device: captureDevice!)
             session.addInput(input)
         }
         catch {

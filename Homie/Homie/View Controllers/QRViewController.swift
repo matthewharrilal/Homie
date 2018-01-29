@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import SwiftQRCode
 
 class QRViewController: UIViewController {
     
@@ -16,7 +15,7 @@ class QRViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        qrImageView.image = QRCode
+        
     }
     
     override func didReceiveMemoryWarning() {

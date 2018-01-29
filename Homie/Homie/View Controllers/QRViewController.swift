@@ -26,6 +26,7 @@ class QRGeneratorViewController: UIViewController {
     }
     
     func convertToQRCode() {
+        qrLabel.text = EmailandPassword.email
         guard let qrLabel = qrLabel.text else {return}
         let data = qrLabel.data(using: .ascii, allowLossyConversion: false)
         let filter = CIFilter(name: "CIQRCodeGenerator")

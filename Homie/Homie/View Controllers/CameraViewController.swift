@@ -41,6 +41,8 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         view.layer.addSublayer(video)
         
         session.startRunning()
+        
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {

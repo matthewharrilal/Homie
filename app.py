@@ -205,7 +205,7 @@ class RecieveUsersProfile(Resource):
                 homie_collection.save(user_find)
                 return requested_json
             elif 'profile_picture' not in requested_json and 'bio' in requested_json:
-                user_find['bio'] = requested_json[bio]
+                user_find['bio'] = requested_json["bio"]
                 homie_collection.save(user_find)
                 return user_find
             elif 'profile_picture' in requested_json and 'bio' in requested_json:

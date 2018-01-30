@@ -173,6 +173,7 @@ class RecieveUsersProfile(Resource):
         user_find = homie_collection.find_one({'email': auth.username})
 
         if user_find is not None:
+            print("This is the userfind %s" %(user_find))
             return user_find
 
     def post(self):

@@ -172,18 +172,8 @@ class RecieveUsersProfile(Resource):
 
         user_find = homie_collection.find_one({'email': auth.username})
 
-        # Now that we have found the user we have to instantiate the profile collection to make fetch the resources from their profile
-        profile_collection = database.profile_collection
-
-        # Then we find the users profile once we have verified thhat the user has existed 
-        profile_find = profile_collection.find_one({'email': auth.username})
-
-        if profile_find is None:
-            return None
         if user_find is not None:
-            print("The users profile has succesfully been fetched")
-            print(user_find)
-            return(user_find, 200, None)
+            return user_find
 
     def post(self):
         '''This is the function that posts a users profile'''

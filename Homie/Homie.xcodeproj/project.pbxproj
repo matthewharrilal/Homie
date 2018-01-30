@@ -35,6 +35,7 @@
 		1C16633A201FDE8C00A291AD /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C166339201FDE8C00A291AD /* CameraViewController.swift */; };
 		1C16633C201FED4900A291AD /* SendCoinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C16633B201FED4900A291AD /* SendCoinsViewController.swift */; };
 		1C24E4352020F75E0087B470 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24E4342020F75E0087B470 /* ProfileViewController.swift */; };
+		1C24E437202129110087B470 /* ProfileNetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24E436202129110087B470 /* ProfileNetworkingLayer.swift */; };
 		F5F4FEC06F4426215F4703F1 /* Pods_Homie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF90CAC5AD62C745EDB8F4C /* Pods_Homie.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		1C166339201FDE8C00A291AD /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		1C16633B201FED4900A291AD /* SendCoinsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCoinsViewController.swift; sourceTree = "<group>"; };
 		1C24E4342020F75E0087B470 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1C24E436202129110087B470 /* ProfileNetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNetworkingLayer.swift; sourceTree = "<group>"; };
 		49591735D3619CFB7B4E29EB /* Pods-Homie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.release.xcconfig"; sourceTree = "<group>"; };
 		874C7D7E97301BFFC563F871 /* Pods-Homie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.debug.xcconfig"; sourceTree = "<group>"; };
 		FAF90CAC5AD62C745EDB8F4C /* Pods_Homie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				1C0C3A6A201D502800AA3F61 /* UserNetworkingLayer.swift */,
+				1C24E436202129110087B470 /* ProfileNetworkingLayer.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				1C16633A201FDE8C00A291AD /* CameraViewController.swift in Sources */,
 				1C0C3A67201D4D0600AA3F61 /* UserModel.swift in Sources */,
 				1C0C3A4F201D352A00AA3F61 /* AppDelegate.swift in Sources */,
+				1C24E437202129110087B470 /* ProfileNetworkingLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

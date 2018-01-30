@@ -143,7 +143,7 @@ class WalletBalance(Resource):
         requested_json = request.json
 
 
-         user_find = homie_collection.find_one({'email': auth.username})
+        user_find = homie_collection.find_one({'email': auth.username})
 
         if user_find is not None and 'fund_amount' in requested_json and 'email' in requested_json:
             wallet_collection.insert_one(requested_json)
@@ -202,17 +202,29 @@ class RecieveUsersProfile(Resource):
         if 'profile_picture' in user_find and 'bio' in user_find:
             user_collection.replace_one({'profile_picture': requested_json['profile_picture']})
             user_collection.replace_one({'bio': requested_json['bio']})
+            print('The users profile picture and bio have been replaced')
+
         elif 'profile_picture' in user_find and 'bio' not in user_find:
             user_collection.replace_one({'profile_picture': requested_json['profile_picture']})
+            print('The users profile pitcure has been replaced')
+    
         elif 'bio' in user_find and 'profile_picture' not in user_find:
             user_collection.replace_one({'bio': requested_json['bio']})
+            print('The users bio has been replaced')
+
         elif 'profile_picture' not in user_find and 'bio' not in user_find:
             user_collection.insert_one({"profile_picture": requested_json['profile_picture']})
             user_collection.insert_one({'bio': requested_json['bio']})
+            print('The users profile picture and bio has been posted')
+            return requested_json, 201, None
+
+        return requested_json, 200, None
+        
 
 
 api.add_resource(User, '/users')
 api.add_resource(WalletBalance, '/wallet')
+api.add_resource(RecieveUsersProfile, "/profile")
 
 @api.representation('application/json')
 def output_json(data, code, headers=None):

@@ -221,13 +221,26 @@ class RecieveUsersProfile(Resource):
         #     return requested_json, 201, None
 
         # So let us outline the following conditions if the user is trying to add a profile picture but has one already stored then we find it and replace it
-        if user_find is not None and 'profile_picture' in requested_json:
-            user_find['profile_picture'] = requested_json['profile_picture']
-            homie_collection.save(user_find)
-            return requested_json
+        # if user_find is not None and 'profile_picture' in requested_json:
+        #     user_find['profile_picture'] = requested_json['profile_picture']
+        #     homie_collection.save(user_find)
+        #     return requested_json, 200, None
+        # elif user_find
 
-        # return requested_json, 200, None
-        
+        if user_find is not None:
+            if 'profile_picture' in requested_json and 'bio' not in requested_json:
+                user_find['profile_picture'] = requested_json['profile_picture']
+                homie_collection.save(user_find)
+                return requested_json, 200, None
+            elif 'profile_picture' not in requested_json and 'bio' in requested_json:
+                user_find['bio'] = requested_json[bio]
+                homie_collection.save(user_find)
+                return user_find, 200, None
+            else:
+                user_find['bio'] = requested_json['bio']
+                user_find['password'] = requested_json['password']
+                homie_collection.save(user_find)
+                return user_find, 200, None        
 
 
 api.add_resource(User, '/users')

@@ -32,8 +32,8 @@ def authenticated_request(func):
         email,password = decode(auth_code)
 
         if email is not None and password is not None:
-            user_collection = database.homie_collection
-            user = user_collection.find_one({'email': email})
+            homie_collection = database.homie_collection
+            user = homie_collection.find_one({'email': email})
             if user is not None:
                 encoded_password = password.encode('utf-8')
                 if bcrypt.checkpw(encoded_password, user['password']):
@@ -62,7 +62,7 @@ class User(Resource):
         requested_json['password'] = hashed
 
         # We can not have duplicate users
-        user_find = user_collection.find_one({'email': requested_json['email']})
+        user_find = homie_collection.find_one({'email': requested_json['email']})
 
         if 'email' in requested_json and 'password' in requested_json and user_find is None:
             homie_collection.insert_one(requested_json)
@@ -170,7 +170,7 @@ class RecieveUsersProfile(Resource):
         # Since this is the function that fetches the users profile we have to make sure that the user is logged in
         auth = request.authorization
 
-        user_find = user_collection.find_one({'email': auth.username})
+        user_find = homie_collection.find_one({'email': auth.username})
 
         # Now that we have found the user we have to instantiate the profile collection to make fetch the resources from their profile
         profile_collection = database.profile_collection
@@ -190,7 +190,7 @@ class RecieveUsersProfile(Resource):
 
         auth = request.authorization
 
-        user_find = user_collection.find_one({'email': auth.username})
+        user_find = homie_collection.find_one({'email': auth.username})
 
         # It would actually be best to keep the profile collection in the same collection as the user therefore  once we find
         # the user 
@@ -200,21 +200,21 @@ class RecieveUsersProfile(Resource):
         # So user find is our user object therefore I can subscript user find with the profile picture
 
         if 'profile_picture' in user_find and 'bio' in user_find:
-            user_collection.replace_one({'profile_picture': requested_json['profile_picture']})
-            user_collection.replace_one({'bio': requested_json['bio']})
+            homie_collection.replace_one({'profile_picture': requested_json['profile_picture']})
+            homie_collection.replace_one({'bio': requested_json['bio']})
             print('The users profile picture and bio have been replaced')
 
         elif 'profile_picture' in user_find and 'bio' not in user_find:
-            user_collection.replace_one({'profile_picture': requested_json['profile_picture']})
+            homie_collection.replace_one({'profile_picture': requested_json['profile_picture']})
             print('The users profile pitcure has been replaced')
     
         elif 'bio' in user_find and 'profile_picture' not in user_find:
-            user_collection.replace_one({'bio': requested_json['bio']})
+            homie_collection.replace_one({'bio': requested_json['bio']})
             print('The users bio has been replaced')
 
         elif 'profile_picture' not in user_find and 'bio' not in user_find:
-            user_collection.insert_one({"profile_picture": requested_json['profile_picture']})
-            user_collection.insert_one({'bio': requested_json['bio']})
+            homie_collection.insert_one({"profile_picture": requested_json['profile_picture']})
+            homie_collection.insert_one({'bio': requested_json['bio']})
             print('The users profile picture and bio has been posted')
             return requested_json, 201, None
 

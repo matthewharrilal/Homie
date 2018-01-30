@@ -191,8 +191,9 @@ class RecieveUsersProfile(Resource):
         requested_json = request.json
 
         if user_find is not None:
-            if 'profile_picture' in requested_json and 'bio' not in requested_json:
+            if 'profile_picture' in requested_json and 'bio' in requested_json:
                 user_find['profile_picture'] = requested_json['profile_picture']
+                user_find['bio'] = requested_json['bio']
                 homie_collection.save(user_find)
                 return requested_json
     def patch(self):

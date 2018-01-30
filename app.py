@@ -209,7 +209,7 @@ class RecieveUsersProfile(Resource):
             homie_collection.updateOne({'profile_picture': requested_json['profile_picture']})
             print('The users profile pitcure has been replaced')
     
-        elif 'bio' in user_find and 'profile_picture' not in user_find and 'bio' in requested_json and 'profile_picture' not in requested_json:
+        elif 'bio' in user_find and 'bio' in requested_json and 'profile_picture' not in requested_json:
             homie_collection.updateOne({'bio': requested_json['bio']})
             print('The users bio has been replaced')
 

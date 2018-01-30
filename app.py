@@ -238,7 +238,7 @@ class RecieveUsersProfile(Resource):
                 return user_find, 200, None
             else:
                 user_find['bio'] = requested_json['bio']
-                user_find['password'] = requested_json['password']
+                user_find['profile_picture'] = requested_json['profile_picture']
                 homie_collection.save(user_find)
                 return user_find, 200, None        
 

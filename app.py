@@ -201,21 +201,21 @@ class RecieveUsersProfile(Resource):
         # So user find is our user object therefore I can subscript user find with the profile picture
 
         if 'profile_picture' in user_find and 'bio' in user_find:
-            user_find.replace_one({'profile_picture': requested_json['profile_picture']})
-            user_find.replace_one({'bio': requested_json['bio']})
+            homie_collection.replace_one({'profile_picture': requested_json['profile_picture']})
+            homie_collection.replace_one({'bio': requested_json['bio']})
             print('The users profile picture and bio have been replaced')
 
         elif 'profile_picture' in user_find and 'bio' not in user_find:
-            user_find.replace_one({'profile_picture': requested_json['profile_picture']})
+            homie_collection.replace_one({'profile_picture': requested_json['profile_picture']})
             print('The users profile pitcure has been replaced')
     
         elif 'bio' in user_find and 'profile_picture' not in user_find:
-            user_find.replace_one({'bio': requested_json['bio']})
+            homie_collection.replace_one({'bio': requested_json['bio']})
             print('The users bio has been replaced')
 
         elif 'profile_picture' not in user_find and 'bio' not in user_find:
-            user_find.insert_one({"profile_picture": requested_json['profile_picture']})
-            user_find.insert_one({'bio': requested_json['bio']})
+            homie_collection.insert_one({"profile_picture": requested_json['profile_picture']})
+            homie_collection.insert_one({'bio': requested_json['bio']})
             print('The users profile picture and bio has been posted')
             return requested_json, 201, None
 

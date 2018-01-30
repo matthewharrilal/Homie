@@ -61,14 +61,14 @@ class User(Resource):
         hashed = bcrypt.hashpw(encoded_password, bcrypt.gensalt(rounds))
         requested_json['password'] = hashed
 
-        if 'email' in requested_json and 'password' in requested_json:
+        # We can not have duplicate users
+        user_find = user_collection.find_one({'email': requested_json['email']})
+
+        if 'email' in requested_json and 'password' in requested_json and user_find is None:
             homie_collection.insert_one(requested_json)
             requested_json.pop('password')
             print('The user has succesfully been implemented to the database')
             return(requested_json, 201, None)
-        else:
-            print("An error has occured trying to implement this document")
-            return(None, 404, None)
 
 
     @authenticated_request
@@ -111,6 +111,7 @@ class User(Resource):
             print("The user could not be deleted")
             return(None, 404, None)
 
+
 class WalletBalance(Resource):
     @authenticated_request
     def get(self):
@@ -130,8 +131,9 @@ class WalletBalance(Resource):
             print('The wallet has succesfully been fetched')
             return(wallet_find, 200, None)
 
+    @authenticated_request
     def post(self):
-        '''Posts the users wallet to the database'''
+        '''Posts the users funds to the database'''
         wallet_collection = database.wallet_collection
 
         # Getting access to the users credentials so that we can verify if the user is logged in
@@ -140,13 +142,73 @@ class WalletBalance(Resource):
         # The json in this case will essentially be the funds that the user has bought
         requested_json = request.json
 
-        user_find = homie_collection.find_one({'email': auth.username})
+
+         user_find = homie_collection.find_one({'email': auth.username})
 
         if user_find is not None and 'fund_amount' in requested_json and 'email' in requested_json:
             wallet_collection.insert_one(requested_json)
             print("The users funds have been sent to the database")
             print(requested_json)
             return requested_json, 201, None
+    
+    # @authenticated_request
+    # def send_funds(self):
+    #     # Getting access to the wallet collection
+    #     wallet_collection = database.wallet_collection
+
+    #     # We have to first verify that the user that is trying to send funds is logged in
+    #     auth = request.authorization
+
+    #     # Get access to the amount of funds that the user is trying to send
+    #     requested_json = request.json
+
+    #     receving_user = 
+
+class RecieveUsersProfile(Resource):
+    def get(self):
+        '''This is the function that fetches the users profile'''
+        # Since this is the function that fetches the users profile we have to make sure that the user is logged in
+        auth = request.authorization
+
+        user_find = user_collection.find_one({'email': auth.username})
+
+        # Now that we have found the user we have to instantiate the profile collection to make fetch the resources from their profile
+        profile_collection = database.profile_collection
+
+        # Then we find the users profile once we have verified thhat the user has existed 
+        profile_find = profile_collection.find_one({'email': auth.username})
+
+        if profile_find is None:
+            return None
+        if user_find is not None:
+            print("The users profile has succesfully been fetched")
+            return(user_find, 200, None)
+
+    def post(self):
+        '''This is the function that posts a users profile'''
+        # We first have to make sure that the user is logged in before we can change their profile picture
+
+        auth = request.authorization
+
+        user_find = user_collection.find_one({'email': auth.username})
+
+        # It would actually be best to keep the profile collection in the same collection as the user therefore  once we find
+        # the user 
+
+        requested_json = request.json
+
+        # So user find is our user object therefore I can subscript user find with the profile picture
+
+        if 'profile_picture' in user_find and 'bio' in user_find:
+            user_collection.replace_one({'profile_picture': requested_json['profile_picture']})
+            user_collection.replace_one({'bio': requested_json['bio']})
+        elif 'profile_picture' in user_find and 'bio' not in user_find:
+            user_collection.replace_one({'profile_picture': requested_json['profile_picture']})
+        elif 'bio' in user_find and 'profile_picture' not in user_find:
+            user_collection.replace_one({'bio': requested_json['bio']})
+        elif 'profile_picture' not in user_find and 'bio' not in user_find:
+            user_collection.insert_one({"profile_picture": requested_json['profile_picture']})
+            user_collection.insert_one({'bio': requested_json['bio']})
 
 
 api.add_resource(User, '/users')

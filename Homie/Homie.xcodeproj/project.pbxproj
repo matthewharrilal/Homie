@@ -33,6 +33,8 @@
 		1C166336201FD89B00A291AD /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C166335201FD89B00A291AD /* ScannerViewController.swift */; };
 		1C166338201FDA3B00A291AD /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C166337201FDA3B00A291AD /* QRViewController.swift */; };
 		1C16633A201FDE8C00A291AD /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C166339201FDE8C00A291AD /* CameraViewController.swift */; };
+		1C16633C201FED4900A291AD /* SendCoinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C16633B201FED4900A291AD /* SendCoinsViewController.swift */; };
+		1C24E4352020F75E0087B470 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C24E4342020F75E0087B470 /* ProfileViewController.swift */; };
 		F5F4FEC06F4426215F4703F1 /* Pods_Homie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF90CAC5AD62C745EDB8F4C /* Pods_Homie.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		1C166335201FD89B00A291AD /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		1C166337201FDA3B00A291AD /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		1C166339201FDE8C00A291AD /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		1C16633B201FED4900A291AD /* SendCoinsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCoinsViewController.swift; sourceTree = "<group>"; };
+		1C24E4342020F75E0087B470 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		49591735D3619CFB7B4E29EB /* Pods-Homie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.release.xcconfig"; sourceTree = "<group>"; };
 		874C7D7E97301BFFC563F871 /* Pods-Homie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Homie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Homie/Pods-Homie.debug.xcconfig"; sourceTree = "<group>"; };
 		FAF90CAC5AD62C745EDB8F4C /* Pods_Homie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Homie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +166,8 @@
 				1C166335201FD89B00A291AD /* ScannerViewController.swift */,
 				1C166337201FDA3B00A291AD /* QRViewController.swift */,
 				1C166339201FDE8C00A291AD /* CameraViewController.swift */,
+				1C16633B201FED4900A291AD /* SendCoinsViewController.swift */,
+				1C24E4342020F75E0087B470 /* ProfileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -328,8 +334,10 @@
 				1C0C3A88201FC3B400AA3F61 /* SignUpViewController.swift in Sources */,
 				1C0C3A78201E4EDD00AA3F61 /* FirstViewController.swift in Sources */,
 				1C0C3A69201D4D7300AA3F61 /* BasicAuth.swift in Sources */,
+				1C16633C201FED4900A291AD /* SendCoinsViewController.swift in Sources */,
 				1C0C3A51201D352A00AA3F61 /* LogInViewController.swift in Sources */,
 				1C0C3A86201FBE5C00AA3F61 /* Helpers.swift in Sources */,
+				1C24E4352020F75E0087B470 /* ProfileViewController.swift in Sources */,
 				1C0C3A6B201D502800AA3F61 /* UserNetworkingLayer.swift in Sources */,
 				1C0C3A70201D5E2400AA3F61 /* HomeViewController.swift in Sources */,
 				1C166336201FD89B00A291AD /* ScannerViewController.swift in Sources */,

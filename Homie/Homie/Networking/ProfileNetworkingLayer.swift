@@ -68,23 +68,25 @@ extension DifferentProfiles: TargetType {
         }
     }
     
-    func profileNetworking(target: DifferentProfiles, success successCallBack: @escaping(Response) -> Void, error errorCallBack: @escaping(Swift.Error) -> Void, failure failureCallBack: @escaping(MoyaError) -> Void, controller: UIViewController) {
-        let provider = MoyaProvider<DifferentProfiles>()
-        provider.request(target) { (result) in
-            switch result {
-            case .success(let response):
-                if response.statusCode >= 200 && response.statusCode <= 300 {
-                    print(response.statusCode)
-                    successCallBack(response)
-                }
-                else {
-                    loadingProfileError(controller: controller)
-                }
-            case .failure(let error):
-                loadingProfileError(controller: controller)
-            
+}
+
+
+func profileNetworking(target: DifferentProfiles, success successCallBack: @escaping(Response) -> Void, error errorCallBack: @escaping(Swift.Error) -> Void, failure failureCallBack: @escaping(MoyaError) -> Void, controller: UIViewController) {
+    let provider = MoyaProvider<DifferentProfiles>()
+    provider.request(target) { (result) in
+        switch result {
+        case .success(let response):
+            if response.statusCode >= 200 && response.statusCode <= 300 {
+                print(response.statusCode)
+                successCallBack(response)
             }
+            else {
+                print(response.statusCode)
+                loadingProfileError(controller: controller)
+            }
+        case .failure(let error):
+            loadingProfileError(controller: controller)
+            
         }
     }
-    
 }

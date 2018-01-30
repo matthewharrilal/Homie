@@ -17,6 +17,9 @@ enum DifferentProfiles {
     // Later on for refactoring what we can essentially do is that we can optimize where we scale this file in the user class some of this code might end up being redundant
 }
 
+let profile = ProfileViewController()
+
+
 extension DifferentProfiles: TargetType {
     var baseURL: URL {
         let baseUrl = URL(string: "https://homie-application.herokuapp.com/")
@@ -56,7 +59,7 @@ extension DifferentProfiles: TargetType {
         case .fetchProfiles:
             return .requestPlain
         case .updateProfiles, .createProfiles:
-            return .requestParameters(parameters: ["profile_picture": "Temporary Profile Picture", "bio": "Temporary Bio"], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: ["profile_picture": "Temporary Profile", "bio": profile.userBioTextView.text], encoding: JSONEncoding.default)
         }
     }
     

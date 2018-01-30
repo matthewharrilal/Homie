@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUsername()
-        
+        self.hideKeyboardWhenTapped()
 
         
         userNetworking(target: .fetchUsers, success: { (response) in
@@ -44,6 +44,17 @@ class ProfileViewController: UIViewController {
         usernameLabel.text = EmailandPassword.email
     }
 
+    @IBAction func saveProfileChanges(_ sender: Any) {
+        profileNetworking(target: .updateProfiles, success: { (response) in
+            let json = try? response.mapJSON()
+        }, error: { (error) in
+            print(error)
+        }, failure: { (MoyaError) in
+            print(MoyaError)
+        }, controller: self )
+    }
+    
+    
 }
 
 

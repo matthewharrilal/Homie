@@ -73,11 +73,15 @@ extension DifferentProfiles: TargetType {
         provider.request(target) { (result) in
             switch result {
             case .success(let response):
-                if response.statusCode >= 200 && response.statusCode <== 300 {
+                if response.statusCode >= 200 && response.statusCode <= 300 {
                     print(response.statusCode)
                     successCallBack(response)
                 }
-                
+                else {
+                    loadingProfileError(controller: controller)
+                }
+            case .failure(let error):
+                loadingProfileError(controller: controller)
             
             }
         }

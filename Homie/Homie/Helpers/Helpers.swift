@@ -34,3 +34,10 @@ func missingInput(controller: UIViewController) {
     alert.addAction(cancelAction)
     controller.present(alert, animated: true, completion: nil)
 }
+
+func loadingProfileError(controller: UIViewController) {
+    let alert = UIAlertController(title: "Error Loading Profile", message: "There was an error loading your profile, please try again at a later time", preferredStyle: .alert)
+    let cancelAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+    alert.addAction(cancelAction)
+    controller.present(alert, animated: true, completion: nil)
+}

@@ -198,6 +198,8 @@ class RecieveUsersProfile(Resource):
     def patch(self):
         auth = request.authorization
         user_find = homie_collection.find_one({'email': auth.username})  
+        requested_json = request.json
+        
         if user_find is not None:
             if 'profile_picture' not in requested_json and 'bio' in requested_json:
                 user_find['bio'] = requested_json["bio"]

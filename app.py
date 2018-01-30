@@ -199,7 +199,7 @@ class RecieveUsersProfile(Resource):
         auth = request.authorization
         user_find = homie_collection.find_one({'email': auth.username})  
         if user_find is not None:
-             if 'profile_picture' not in requested_json and 'bio' in requested_json:
+            if 'profile_picture' not in requested_json and 'bio' in requested_json:
                 user_find['bio'] = requested_json["bio"]
                 homie_collection.save(user_find)
                 return requested_json

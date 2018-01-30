@@ -174,7 +174,7 @@ class RecieveUsersProfile(Resource):
 
         if user_find is not None:
             print("This is the userfind %s" %(user_find))
-            return user_find
+            return user_find,200 , None
 
     def post(self):
         '''This is the function that posts a users profile'''

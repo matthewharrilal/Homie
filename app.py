@@ -195,11 +195,6 @@ class RecieveUsersProfile(Resource):
                 user_find['profile_picture'] = requested_json['profile_picture']
                 homie_collection.save(user_find)
                 return requested_json
-            elif 'profile_picture' in requested_json and 'bio' in requested_json:
-                user_find['bio'] = requested_json['bio']
-                user_find['profile_picture'] = requested_json['profile_picture']
-                homie_collection.save(user_find)
-                return requested_json  
     def patch(self):
         auth = request.authorization
         user_find = homie_collection.find_one({'email': auth.username})  
@@ -214,6 +209,11 @@ class RecieveUsersProfile(Resource):
                 user_find['profile_picture'] = requested_json['profile_picture']
                 homie_collection.save(user_find)
                 return requested_json
+            elif 'profile_picture' in requested_json and 'bio' in requested_json:
+                user_find['bio'] = requested_json['bio']
+                user_find['profile_picture'] = requested_json['profile_picture']
+                homie_collection.save(user_find)
+                return requested_json  
 
 
 api.add_resource(User, '/users')
